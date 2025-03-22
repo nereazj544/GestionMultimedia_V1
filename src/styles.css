@@ -1,14 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     list-style: none;
     text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
-
 
 div {
     display: grid;
-    /* min-height: 10rem; */
     grid-template-rows: auto 1fr auto;
 }
 
@@ -28,7 +30,7 @@ nav ul {
 }
 
 ul li{
-    padding: 0px 4.3px ;
+    padding: 0px 4.3px;
 }
 
 .logo a{
@@ -37,10 +39,28 @@ ul li{
 }
 .logo a:hover{
     color: #06ADBF;
-
+    text-decoration: none;
 }
 
-a {}
+a:hover {
+    color: #BF303C;
+    text-decoration: underline;
+}
+
+li button{
+    background-color: #06ADBF;
+    border-radius: 30px;
+    font-size: 15px;
+    color: white;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+li button a{
+    color: white;
+}
 
 /*TODO SEPARADOR DIV */
 
