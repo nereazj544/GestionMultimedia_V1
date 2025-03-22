@@ -8,10 +8,13 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 
 export class HomeComponent implements OnInit, OnDestroy {
+
+
   palabras: string[] = ['Libros', 'Videojuegos', 'Peliculas', 'Series'];
-  palabraActual: string = '';
+  palabraActual: string = this.palabras[0];
   indice: number = 0;
   private intervaloId: any;
+
 
   ngOnInit(): void {
     this.iniciarSecuencia();
@@ -22,6 +25,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       clearInterval(this.intervaloId);
       this.intervaloId = null;
     }
+
   }
 
   iniciarSecuencia() {
@@ -34,4 +38,5 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.palabraActual = this.palabras[this.indice];
     }, 3000);
   }
+
 }
