@@ -6,36 +6,32 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit, OnDestroy{
 
-  palabras: string[] = ['Libros', 'Videojuegos', 'Peliculas', 'Series']
-  palabraAc: string = ' ';
-  i: number = 0;
-
-  private intevaloId: any;
+export class HomeComponent implements OnInit, OnDestroy {
+  palabras: string[] = ['Libros', 'Videojuegos', 'Peliculas', 'Series'];
+  palabraActual: string = '';
+  indice: number = 0;
+  private intervaloId: any;
 
   ngOnInit(): void {
-      this.PalabrasCambio();
+    this.iniciarSecuencia();
   }
 
-  ngOnDestroy(){
-    if (this.intevaloId) {
-      clearInterval(this.intevaloId);
-      this.intevaloId = null;
+  ngOnDestroy() {
+    if (this.intervaloId) {
+      clearInterval(this.intervaloId);
+      this.intervaloId = null;
     }
   }
 
-  PalabrasCambio(){
-    if (this.intevaloId) {
-      clearInterval(this.intevaloId)
+  iniciarSecuencia() {
+    if (this.intervaloId) {
+      clearInterval(this.intervaloId);
     }
-
-    this.palabraAc = this.palabras[0];
-    this.intevaloId = setInterval(() => {
-      this.i = (this.i + 1)  % this.palabras.length;
-      this.palabraAc = this.palabras[this.i]
-    }, 3000)
+    this.palabraActual = this.palabras[0];
+    this.intervaloId = setInterval(() => {
+      this.indice = (this.indice + 1) % this.palabras.length;
+      this.palabraActual = this.palabras[this.indice];
+    }, 3000);
   }
-
-
 }
