@@ -1,1 +1,94 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+    list-style: none;
+    text-decoration: none;
+}
+
+
+div {
+    display: grid;
+    /* min-height: 10rem; */
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+/* TODO MENU */
+nav {
+    display: flex;
+    /* padding: 1rem 2rem; */
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ul li{
+    padding: 0px 4.3px ;
+}
+
+.logo a{
+    color: #D90DA2;
+    padding-right: 59rem;
+}
+.logo a:hover{
+    color: #06ADBF;
+
+}
+
+a {}
+
+/*TODO SEPARADOR DIV */
+
+.separadordvi {
+    min-height: 15rem;
+}
+
+
+/*TODO == PIE DE PAGINA ==*/
+footer {
+    /* background-color: aqua; */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1px 90px;
+    display: flex;
+    flex-direction: column;
+    
+    /* max-width: auto; */
+}
+.s-footer {
+    display: flex;
+}
+
+.a-footer {
+    margin-left: 50rem;
+}
+
+.a-footer:hover {
+    color: aqua;
+}
+
+.separador {
+    display: none;
+}
+
+/* El salto de línea que se muestra en móviles */
+.salto-linea {
+    display: block;
+}
+
+/* Media query para pantallas medianas y grandes */
+@media (min-width: 768px) {
+    .separador {
+        display: inline;
+    }
+
+    .salto-linea {
+        display: none;
+    }
+
+}
